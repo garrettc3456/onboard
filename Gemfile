@@ -42,7 +42,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # gems we have added as port of this
 # Add a CMS (active_admin)
-gem 'active_admin', github: 'gregbell/active_admin'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 # make forms easier to build
 gem 'simple_form'
