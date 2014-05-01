@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # sign up
   resources :users
 
+  # log in and log out
+  # singular resource because we only want to do this once
+  resource :session
 
   # home page is the list of rooms
   root "rooms#index"
