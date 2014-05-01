@@ -1,9 +1,12 @@
 <h2>Rooms</h2>
 
 <% @rooms.each do |room| %>
-
+<!-- we have updated this in order to make both the pic and text as links -->
 	<div class="room">
-		<h3><%= link_to room.name, room_path(room) %></h3>
+		<%= link_to room_path(room) do %>
+			<%= image_tag room.image(:thumbnail) %>
+			<h3><%= room.name %></h3>
+		<% end %>
 	</div>
 
 <% end %>
