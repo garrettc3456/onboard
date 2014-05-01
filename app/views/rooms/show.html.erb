@@ -9,13 +9,20 @@
 		<%= @room.address %>
 </p>
 
-<div class="actions">
+<% if @room.user.present? %>
+	<p>Added by <%= @room.user.username %></p>
+<% end %>
 
-	<%= link_to "Edit", edit_room_path(@room) %>
-	<%= link_to "Delete", room_path(@room), method: :delete,
-		data: {confirm: "Are you sure?"} %>
 
-</div>
+<!-- adding the first row makes the edit and delete visible only to the room owner -->
+<% if current_user.present? and current_user == @room.user %>
+	<div class="actions">
 
+		<%= link_to "Edit", edit_room_path(@room) %>
+		<%= link_to "Delete", room_path(@room), method: :delete,
+			data: {confirm: "Are you sure?"} %>
+
+	</div>
+<% end %>
 
 <%= link_to "Back to homepage", root_path %>

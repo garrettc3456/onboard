@@ -8,6 +8,13 @@ class CreateUsers < ActiveRecord::Migration
     	# to make passwrods secure in our database, we put:
     	t.string :password_digest
 
+
+
+# if you wnated to create differnet types of users (business/regular),
+# you weould put 
+  
+  
+
       t.timestamps
     end
   end
