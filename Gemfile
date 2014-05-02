@@ -66,5 +66,9 @@ gem 'omniauth-linkedin'
 # layout for onboard by steer for formatting
 gem 'steer'
 
+# add in foundation by zurb
+gem 'foundation-rails'
+
+
 
 
