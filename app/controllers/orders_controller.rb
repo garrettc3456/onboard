@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
 			if @order.save
 
 				# charge them with stripe
-				Stripe::Charge.create(amount: 100, currency: "gbp",
+				Stripe::Charge.create(amount: @room.price_in_pence, currency: "gbp",
 					card: @order.stripe_token, description: "Onboard order")
 
 				# To set up a subscription plan,
